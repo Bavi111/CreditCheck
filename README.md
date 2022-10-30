@@ -21,11 +21,15 @@ type "p" for the credit principal:
 if calc_type == "n":
     months = math.ceil(n_of_payments())
     years = 0
+    
     if months == 12:
+    
         print("You need 1 year to repay this credit!")
     elif months > 12:
+    
         years = months // 12
         months = months % 12
+        
         if months == 1:
             print("You need {years} years and 1 month to repay this credit!")
         else:
