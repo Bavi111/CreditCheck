@@ -16,13 +16,11 @@ def n_of_payments():
     return math.log(mp / (mp - i * P), 1 + i)
 
 
-calc_type = input("""What do you want to calculate?
+calc_type = input("""Que quieres calcular?
 
-type "n" for the number of months,
+type "n" for numero de months,
 
-type "a" for the annuity monthly payment,
-
-type "p" for the credit principal:
+type "p" for credit principal:
 
 """)
 
@@ -41,11 +39,11 @@ if calc_type == "n":
         months = months % 12
         
         if months == 1:
-            print("You need {years} years and 1 month to repay this credit!")
+            print("{years} years required to repay credit")
         else:
-            print("You need {years} years and {months} months to repay this credit!")
+            print("You need {years} years and {months} months required to repay credit")
     else:
         if months == 1:
-            print("You need 1 months to repay this credit!")
+            print("At least 1 month required to repay credit")
         else:
-            print(f"You need {months} months to repay this credit!")
+            print("{months} months required to repay credit")
